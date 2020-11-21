@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: postgres:12.2-alpine
+    # Use postgres/secret user/password credentials
+    environment:
+      POSTGRES_PASSWORD: secret
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
