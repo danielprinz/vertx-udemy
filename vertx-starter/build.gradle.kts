@@ -15,8 +15,9 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.0.0.CR1"
+val vertxVersion = "4.0.0.CR2"
 val junitJupiterVersion = "5.6.0"
+val jacksonVersion = "2.11.3"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_starter.MainVerticle"
 val watchForChange = "src/**/*"
@@ -35,6 +36,7 @@ dependencyManagement {
 
 dependencies {
   implementation("io.vertx:vertx-core:$vertxVersion")
+  implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
   implementation("org.apache.logging.log4j:log4j-api")
   implementation("org.apache.logging.log4j:log4j-core")
   implementation("org.apache.logging.log4j:log4j-slf4j-impl")
