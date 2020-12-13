@@ -1,7 +1,6 @@
 package com.danielprinz.udemy.vertx_starter.eventbus;
 
 import java.time.Duration;
-import java.time.temporal.ChronoUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +23,7 @@ public class PublishSubscribeExample {
     @Override
     public void start(final Promise<Void> startPromise) throws Exception {
       startPromise.complete();
-      vertx.setPeriodic(Duration.of(10, ChronoUnit.SECONDS).toMillis(), id ->
+      vertx.setPeriodic(Duration.ofSeconds(10).toMillis(), id ->
         vertx.eventBus().publish(Publish.class.getName(), "A message for everyone!")
       );
     }

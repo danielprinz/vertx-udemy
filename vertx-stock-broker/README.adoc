@@ -1,0 +1,6 @@
+= Vertx Stock Broker
+
+== Features:
+* REST API
+* Open API
+* Lombok
