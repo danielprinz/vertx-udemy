@@ -2,5 +2,9 @@
 
 == Features:
 * REST API
-* Open API
 * Lombok
+* Configuration
+* Reactive SQL Client
+* SQL Client Templates
+* Flyway
+* JUnit 5
