@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="MainVerticleVertxLauncher" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="11" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="MAIN_CLASS_NAME" value="io.vertx.core.Launcher" />
+    <module name="vertx-starter.main" />
+    <option name="PROGRAM_PARAMETERS" value="run com.danielprinz.udemy.vertx_starter.MainVerticle --redeploy=**/*.class --launcher-class=io.vertx.core.Launcher" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
