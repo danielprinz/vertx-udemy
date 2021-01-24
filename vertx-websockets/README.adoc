@@ -1,0 +1,6 @@
+= Vertx-websockets
+
+== Features:
+* Web Socket Server
+* Web Socket Server Broadcast
+* Web Socket Client

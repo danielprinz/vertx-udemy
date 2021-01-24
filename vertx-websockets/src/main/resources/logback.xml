@@ -1,0 +1,18 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%yellow(%d{HH:mm:ss.SSS}) %highlight(%level) %green([%thread]) %cyan(%logger{50}) - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="com.danielprinz.udemy" level="debug"/>
+  <logger name="io.netty" level="warn"/>
+  <logger name="io.vertx" level="info"/>
+  <logger name="org.flywaydb.core" level="info"/>
+
+  <root level="INFO">
+    <appender-ref ref="STDOUT"/>
+  </root>
+
+</configuration>
