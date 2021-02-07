@@ -38,6 +38,7 @@ public class PublishSubscribeExample {
       vertx.eventBus().<String>consumer(Publish.class.getName(), message -> {
         LOG.debug("Received: {}", message.body());
       });
+      startPromise.complete();
     }
   }
 
@@ -50,6 +51,7 @@ public class PublishSubscribeExample {
       vertx.eventBus().<String>consumer(Publish.class.getName(), message -> {
         LOG.debug("Received: {}", message.body());
       });
+      startPromise.complete();
     }
   }
 }
