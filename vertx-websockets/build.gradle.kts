@@ -5,6 +5,7 @@ plugins {
   java
   application
   id("com.github.johnrengelman.shadow") version "6.1.0"
+  id("com.github.ben-manes.versions") version "0.38.0"
 }
 
 group = "com.danielprinz.udemy"
@@ -14,8 +15,8 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.0.0"
-val junitJupiterVersion = "5.7.0"
+val vertxVersion = "4.0.3"
+val junitJupiterVersion = "5.7.1"
 val logbackVersion = "1.2.3"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_websockets.MainVerticle"
@@ -25,7 +26,7 @@ val watchForChange = "src/**/*"
 val doOnChange = "${projectDir}/gradlew classes"
 
 application {
-  mainClassName = launcherClassName
+  mainClass.set(launcherClassName)
 }
 
 dependencies {

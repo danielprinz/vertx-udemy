@@ -4,9 +4,10 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent.*
 plugins {
   java
   application
-  id("com.github.johnrengelman.shadow") version "5.2.0"
-  id("io.spring.dependency-management") version "1.0.1.RELEASE"
+  id("com.github.johnrengelman.shadow") version "6.1.0"
+  id("io.spring.dependency-management") version "1.0.11.RELEASE"
   id("com.google.cloud.tools.jib") version "2.7.1"
+  id("com.github.ben-manes.versions") version "0.38.0"
 }
 
 group = "com.danielprinz.udemy"
@@ -16,8 +17,8 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.0.0"
-val junitJupiterVersion = "5.6.0"
+val vertxVersion = "4.0.3"
+val junitJupiterVersion = "5.7.1"
 val jacksonVersion = "2.11.3"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_starter.MainVerticle"
@@ -26,12 +27,12 @@ val doOnChange = "./gradlew classes"
 val launcherClassName = "io.vertx.core.Launcher"
 
 application {
-  mainClassName = launcherClassName
+  mainClass.set(launcherClassName)
 }
 
 dependencyManagement {
   imports {
-    mavenBom("org.apache.logging.log4j:log4j-bom:2.14.0")
+    mavenBom("org.apache.logging.log4j:log4j-bom:2.14.1")
   }
 }
 

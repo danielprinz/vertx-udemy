@@ -16,12 +16,12 @@
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <exec-maven-plugin.version>1.5.0</exec-maven-plugin.version>
 
-    <vertx.version>4.0.0</vertx.version>
+    <vertx.version>4.0.3</vertx.version>
     <logback-classic.version>1.2.3</logback-classic.version>
-    <junit-jupiter.version>5.4.0</junit-jupiter.version>
+    <junit-jupiter.version>5.7.1</junit-jupiter.version>
 
     <jackson-databind.version>2.11.3</jackson-databind.version>
-    <lombok.version>1.18.16</lombok.version>
+    <lombok.version>1.18.18</lombok.version>
 
     <main.verticle>com.danielprinz.udemy.broker.MainVerticle</main.verticle>
   </properties>
