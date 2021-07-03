@@ -18,7 +18,7 @@ import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
 
 @ExtendWith(VertxExtension.class)
-public class TestMainVerticle {
+class TestMainVerticle {
 
   private static final Logger LOG = LoggerFactory.getLogger(TestMainVerticle.class);
   public static final int EXPECTED_MESSAGES = 5;

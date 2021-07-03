@@ -15,7 +15,7 @@ import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
 
 @ExtendWith(VertxExtension.class)
-public class FuturePromiseExample {
+class FuturePromiseExample {
 
   private static final Logger LOG = LoggerFactory.getLogger(FuturePromiseExample.class);
 

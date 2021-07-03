@@ -15,8 +15,8 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.0.3"
-val junitJupiterVersion = "5.7.1"
+val vertxVersion = "4.1.1"
+val junitJupiterVersion = "5.7.2"
 val logbackVersion = "1.2.3"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_websockets.MainVerticle"
