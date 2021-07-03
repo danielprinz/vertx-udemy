@@ -4,10 +4,9 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent.*
 plugins {
   java
   application
-  id("com.github.johnrengelman.shadow") version "6.1.0"
-  id("io.spring.dependency-management") version "1.0.11.RELEASE"
+  id("com.github.johnrengelman.shadow") version "5.2.0"
+  id("io.spring.dependency-management") version "1.0.1.RELEASE"
   id("com.google.cloud.tools.jib") version "2.7.1"
-  id("com.github.ben-manes.versions") version "0.38.0"
 }
 
 group = "com.danielprinz.udemy"
@@ -17,9 +16,9 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.0.3"
-val junitJupiterVersion = "5.7.1"
-val jacksonVersion = "2.11.3"
+val vertxVersion = "4.1.1"
+val junitJupiterVersion = "5.7.2"
+val jacksonVersion = "2.11.4"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_starter.MainVerticle"
 val watchForChange = "src/**/*"
@@ -27,7 +26,7 @@ val doOnChange = "./gradlew classes"
 val launcherClassName = "io.vertx.core.Launcher"
 
 application {
-  mainClass.set(launcherClassName)
+  mainClassName = launcherClassName
 }
 
 dependencyManagement {
@@ -42,7 +41,7 @@ dependencies {
   implementation("org.apache.logging.log4j:log4j-api")
   implementation("org.apache.logging.log4j:log4j-core")
   implementation("org.apache.logging.log4j:log4j-slf4j-impl")
-  implementation("org.slf4j:slf4j-api:1.7.30")
+  implementation("org.slf4j:slf4j-api:1.7.31")
   testImplementation("io.vertx:vertx-junit5:$vertxVersion")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
