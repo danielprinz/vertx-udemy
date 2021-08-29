@@ -1,0 +1,5 @@
+POST localhost:8080/users
+
+{
+  "name": "Eve"
+}
