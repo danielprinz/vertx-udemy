@@ -15,13 +15,13 @@ docker run --name my-postgres -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=vertx-s
 ## Docker Compose
 Execute from root directory:
 ```
-docker-compose -f ./infra/postgres.yml up
+docker-compose -f ./infra/postgres/postgres.yml up
 ```
 
 ## Docker Swarm
 Execute from root directory:
 ```
-docker stack deploy -c ./infra/postgres.yml postgres
+docker stack deploy -c ./infra/postgres/postgres.yml postgres
 ```
 
 Contains a volume for permanent storage of data. On system restart the data is available again.

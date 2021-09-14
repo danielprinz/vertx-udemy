@@ -19,6 +19,8 @@ public class FlywayMigration {
 
   private static final Logger LOG = LoggerFactory.getLogger(FlywayMigration.class);
 
+  private FlywayMigration() {}
+
   public static Future<Void> migrate(final Vertx vertx, final DbConfig dbConfig) {
     LOG.debug("DB Config: {}", dbConfig);
     return vertx.<Void>executeBlocking(promise -> {
@@ -29,7 +31,10 @@ public class FlywayMigration {
   }
 
   private static void execute(final DbConfig dbConfig) {
-    final String jdbcUrl = String.format("jdbc:postgresql://%s:%d/%s",
+    var database = "postgresql";
+    //var database = "mysql";
+    final String jdbcUrl = String.format("jdbc:%s://%s:%d/%s",
+      database,
       dbConfig.getHost(),
       dbConfig.getPort(),
       dbConfig.getDatabase()
