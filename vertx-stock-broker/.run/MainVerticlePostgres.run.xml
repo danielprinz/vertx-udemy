@@ -1,0 +1,23 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="MainVerticlePostgres" type="Application" factoryName="Application">
+    <envs>
+      <env name="SERVER_PORT" value="8888" />
+      <env name="DB_HOST" value="localhost" />
+      <env name="DB_PORT" value="5432" />
+      <env name="DB_DATABASE" value="vertx-stock-broker" />
+      <env name="DB_USER" value="postgres" />
+      <env name="DB_PASSWORD" value="secret" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.danielprinz.udemy.broker.MainVerticle" />
+    <module name="vertx-stock-broker" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.danielprinz.udemy.broker.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -16,9 +16,10 @@
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <exec-maven-plugin.version>1.5.0</exec-maven-plugin.version>
 
-    <vertx.version>4.1.2</vertx.version>
-    <logback-classic.version>1.2.3</logback-classic.version>
-    <junit-jupiter.version>5.7.2</junit-jupiter.version>
+    <vertx.version>4.1.4</vertx.version>
+    <logback-classic.version>1.2.6</logback-classic.version>
+    <junit-jupiter.version>5.8.1</junit-jupiter.version>
+    <flyway-core.version>7.15.0</flyway-core.version>
 
     <jackson-databind.version>2.11.4</jackson-databind.version>
     <lombok.version>1.18.20</lombok.version>
@@ -74,14 +75,14 @@
     <dependency>
       <groupId>org.flywaydb</groupId>
       <artifactId>flyway-core</artifactId>
-      <version>7.10.0</version>
+      <version>${flyway-core.version}</version>
     </dependency>
     <!-- Depending on your db you need the JDBC Driver 1 or 2 -->
     <!-- 1 - JDBC Driver https://mvnrepository.com/artifact/org.postgresql/postgresql -->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.2.22</version>
+      <version>42.2.24</version>
       <scope>runtime</scope>
     </dependency>
     <!-- 2 - JDBC Driver https://mvnrepository.com/artifact/mysql/mysql-connector-java -->

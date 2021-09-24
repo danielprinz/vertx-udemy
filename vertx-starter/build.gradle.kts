@@ -4,9 +4,9 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent.*
 plugins {
   java
   application
-  id("com.github.johnrengelman.shadow") version "5.2.0"
+  id("com.github.johnrengelman.shadow") version "7.0.0"
   id("io.spring.dependency-management") version "1.0.1.RELEASE"
-  id("com.google.cloud.tools.jib") version "2.7.1"
+  id("com.google.cloud.tools.jib") version "3.1.4"
 }
 
 group = "com.danielprinz.udemy"
@@ -16,8 +16,8 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.1.1"
-val junitJupiterVersion = "5.7.2"
+val vertxVersion = "4.1.4"
+val junitJupiterVersion = "5.8.1"
 val jacksonVersion = "2.11.4"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_starter.MainVerticle"
@@ -26,7 +26,7 @@ val doOnChange = "./gradlew classes"
 val launcherClassName = "io.vertx.core.Launcher"
 
 application {
-  mainClassName = launcherClassName
+  mainClass.set(launcherClassName)
 }
 
 dependencyManagement {
