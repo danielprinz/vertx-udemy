@@ -11,7 +11,7 @@ public class EmbeddedPostgres {
 
   static int startPostgres() {
     // Using test containers to spin up a Postgres DB
-    var pg = new PostgreSQLContainer<>(DockerImageName.parse("postgres:13.3-alpine"))
+    final var pg = new PostgreSQLContainer<>(DockerImageName.parse("postgres:13.5-alpine"))
       .withDatabaseName(DATABASE_NAME)
       .withUsername(USERNAME)
       .withPassword(PASSWORD)
