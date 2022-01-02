@@ -4,8 +4,8 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent.*
 plugins {
   java
   application
-  id("com.github.johnrengelman.shadow") version "7.0.0"
-  id("com.github.ben-manes.versions") version "0.39.0"
+  id("com.github.johnrengelman.shadow") version "7.1.2"
+  id("com.github.ben-manes.versions") version "0.40.0"
 }
 
 group = "com.danielprinz.udemy"
@@ -15,9 +15,9 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.1.4"
-val junitJupiterVersion = "5.8.1"
-val logbackVersion = "1.2.6"
+val vertxVersion = "4.2.3"
+val junitJupiterVersion = "5.8.2"
+val logbackVersion = "1.2.10"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_websockets.MainVerticle"
 val launcherClassName = "io.vertx.core.Launcher"

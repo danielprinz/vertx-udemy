@@ -4,7 +4,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent.*
 plugins {
   java
   application
-  id("com.github.johnrengelman.shadow") version "7.0.0"
+  id("com.github.johnrengelman.shadow") version "7.1.2"
   id("io.spring.dependency-management") version "1.0.1.RELEASE"
   id("com.google.cloud.tools.jib") version "3.1.4"
 }
@@ -16,9 +16,9 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.1.4"
-val junitJupiterVersion = "5.8.1"
-val jacksonVersion = "2.11.4"
+val vertxVersion = "4.2.3"
+val junitJupiterVersion = "5.8.2"
+val jacksonVersion = "2.13.1"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_starter.MainVerticle"
 val watchForChange = "src/**/*"
@@ -31,7 +31,7 @@ application {
 
 dependencyManagement {
   imports {
-    mavenBom("org.apache.logging.log4j:log4j-bom:2.14.1")
+    mavenBom("org.apache.logging.log4j:log4j-bom:2.17.1")
   }
 }
 
@@ -41,7 +41,7 @@ dependencies {
   implementation("org.apache.logging.log4j:log4j-api")
   implementation("org.apache.logging.log4j:log4j-core")
   implementation("org.apache.logging.log4j:log4j-slf4j-impl")
-  implementation("org.slf4j:slf4j-api:1.7.31")
+  implementation("org.slf4j:slf4j-api:1.7.32")
   testImplementation("io.vertx:vertx-junit5:$vertxVersion")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
