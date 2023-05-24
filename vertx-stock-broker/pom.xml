@@ -11,18 +11,18 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-    <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
-    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-    <exec-maven-plugin.version>1.5.0</exec-maven-plugin.version>
+    <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+    <maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
+    <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
+    <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
 
-    <vertx.version>4.2.3</vertx.version>
+    <vertx.version>4.4.2</vertx.version>
     <logback-classic.version>1.2.10</logback-classic.version>
-    <junit-jupiter.version>5.8.2</junit-jupiter.version>
-    <flyway-core.version>8.3.0</flyway-core.version>
+    <junit-jupiter.version>5.9.3</junit-jupiter.version>
+    <flyway-core.version>9.19.0</flyway-core.version>
 
-    <jackson-databind.version>2.13.1</jackson-databind.version>
-    <lombok.version>1.18.22</lombok.version>
+    <jackson-databind.version>2.15.0</jackson-databind.version>
+    <lombok.version>1.18.26</lombok.version>
 
     <main.verticle>com.danielprinz.udemy.broker.MainVerticle</main.verticle>
   </properties>
@@ -82,14 +82,14 @@
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.3.1</version>
+      <version>42.6.0</version>
       <scope>runtime</scope>
     </dependency>
     <!-- 2 - JDBC Driver https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <!--    <dependency>-->
 <!--      <groupId>mysql</groupId>-->
 <!--      <artifactId>mysql-connector-java</artifactId>-->
-<!--      <version>8.0.26</version>-->
+<!--      <version>8.0.33</version>-->
 <!--      <scope>runtime</scope>-->
 <!--    </dependency>-->
     <dependency>
@@ -184,6 +184,32 @@
             <argument>${main.verticle}</argument>
           </arguments>
         </configuration>
+      </plugin>
+      <!-- Optional Plugins for easier dependency Management -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.9.2</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.15.0</version>
       </plugin>
     </plugins>
   </build>
