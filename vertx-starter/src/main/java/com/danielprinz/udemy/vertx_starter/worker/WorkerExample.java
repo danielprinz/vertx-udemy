@@ -1,5 +1,6 @@
 package com.danielprinz.udemy.vertx_starter.worker;
 
+import io.vertx.core.ThreadingModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,7 +22,8 @@ public class WorkerExample extends AbstractVerticle {
   public void start(final Promise<Void> startPromise) throws Exception {
     vertx.deployVerticle(new WorkerVerticle(),
       new DeploymentOptions()
-        .setWorker(true)
+        //Previously: .setWorker(true)
+        .setThreadingModel(ThreadingModel.WORKER)
         .setWorkerPoolSize(1)
         .setWorkerPoolName("my-worker-verticle")
     );

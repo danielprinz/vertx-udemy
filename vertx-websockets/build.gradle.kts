@@ -5,7 +5,7 @@ plugins {
   java
   application
   id("com.github.johnrengelman.shadow") version "7.1.2"
-  id("com.github.ben-manes.versions") version "0.46.0"
+  id("com.github.ben-manes.versions") version "0.51.0"
 }
 
 group = "com.danielprinz.udemy"
@@ -15,9 +15,9 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.4.2"
+val vertxVersion = "4.5.8"
 val junitJupiterVersion = "5.9.3"
-val logbackVersion = "1.4.7"
+val logbackVersion = "1.5.6"
 
 val mainVerticleName = "com.danielprinz.udemy.vertx_websockets.MainVerticle"
 val launcherClassName = "io.vertx.core.Launcher"
@@ -38,8 +38,8 @@ dependencies {
 }
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_11
-  targetCompatibility = JavaVersion.VERSION_11
+  sourceCompatibility = JavaVersion.VERSION_17
+  targetCompatibility = JavaVersion.VERSION_17
 }
 
 tasks.withType<ShadowJar> {

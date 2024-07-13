@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   db:
-    image: postgres:13.5-alpine
+    image: postgres:16-alpine
     environment:
       # Create db
       POSTGRES_DB: vertx-stock-broker

@@ -31,9 +31,9 @@ class TestMainVerticle {
   @Timeout(value = 10, timeUnit = TimeUnit.SECONDS)
   @Test
   void can_connect_to_web_socket_server(Vertx vertx, VertxTestContext context) throws Throwable {
-    var client = vertx.createHttpClient();
+    var client = vertx.createWebSocketClient();
 
-    client.webSocket(8900, "localhost", WebSocketHandler.PATH)
+    client.connect(8900, "localhost", WebSocketHandler.PATH)
       .onFailure(context::failNow)
       .onComplete(context.succeeding(ws -> {
           ws.handler(data -> {
@@ -50,10 +50,10 @@ class TestMainVerticle {
   @Timeout(value = 10, timeUnit = TimeUnit.SECONDS)
   @Test
   void can_receive_multiple_messages(Vertx vertx, VertxTestContext context) throws Throwable {
-    var client = vertx.createHttpClient();
+    var client = vertx.createWebSocketClient();
 
     final AtomicInteger counter = new AtomicInteger(0);
-    client.webSocket(new WebSocketConnectOptions()
+    client.connect(new WebSocketConnectOptions()
       .setHost("localhost")
       .setPort(8900)
       .setURI(WebSocketHandler.PATH)
