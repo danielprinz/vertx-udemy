@@ -5,7 +5,7 @@ https://hub.docker.com/_/postgres
 ## Ephemeral Postgres instances
 This is the quickest way to get started:
 ```
-docker run --name my-postgres -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=vertx-stock-broker -p 5432:5432 -d postgres:13.1-alpine
+docker run --name my-postgres -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=vertx-stock-broker -p 5432:5432 -d postgres:16-alpine
 ```
 
 * User: postgres
